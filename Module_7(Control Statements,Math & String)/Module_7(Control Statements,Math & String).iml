@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/7.1(Ternary operator)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.2(Switch)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.3(Challenges)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.4.1(Loop(Do-While))" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.4.2(Loop(For)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.4.3(Loop(For Each))" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.5(Break &amp; Continue)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.6(Recursion)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.7(Challenges)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.8(Random Numbers &amp; Math class)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7.9(toString Method)" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

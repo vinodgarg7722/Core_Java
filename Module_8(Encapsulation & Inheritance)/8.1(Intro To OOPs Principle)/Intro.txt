@@ -1,0 +1,242 @@
+🚀 What is OOP?
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes. 
+It models real-world entities using these constructs, helping to structure code in a way that's easier to understand, maintain, and extend.
+
+OOP in Java is based on the following four major principles:
+
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+
+1. Encapsulation (Data Hiding)
+Definition:
+Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on the data into a single unit, or class.
+It also involves restricting access to certain components of an object and only exposing necessary functionality through public methods.
+
+Why Encapsulation?
+It helps protect the integrity of an object's state by preventing unwanted modifications.
+It allows for better control over how data is accessed and updated.
+
+How does it work?
+Variables are private to prevent direct access.
+Getter and Setter methods are used to access and modify the private variables.
+
+Example:
+
+class Person {
+    private String name;  // Private variable
+    private int age;
+
+    // Getter Method
+    public String getName() {
+        return name;
+    }
+
+    // Setter Method
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age > 0) {  // Validation logic
+            this.age = age;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("Alice");
+        p.setAge(25);
+        
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
+    }
+}
+
+Output:
+Name: Alice
+Age: 25
+
+
+2. Inheritance (Code Reusability)
+Definition:
+Inheritance is a mechanism where one class (child class) can inherit the fields and methods from another class (parent class).
+It helps avoid redundant code and promotes code reuse.
+
+How does it work?
+A subclass inherits the properties and behaviors of its superclass.
+The subclass can override or extend the functionality of the superclass.
+
+Why Inheritance?
+Helps reuse code (don't need to re-write common behavior).
+Enables the creation of hierarchies (parent-child relationships between classes).
+
+Example:
+
+// Parent class
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Child class (inherits from Animal)
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.sound();  // Output: Animal makes a sound
+        
+        Dog dog = new Dog();
+        dog.sound();  // Output: Dog barks
+    }
+}
+
+Output:
+Animal makes a sound
+Dog barks
+
+
+Polymorphism (Many Forms)
+
+Definition:
+Polymorphism allows objects of different classes to be treated as objects of a common superclass.
+It enables a single method or operator to work in multiple ways based on the object it is acting upon.
+
+Types of Polymorphism in Java:
+Compile-time Polymorphism (Method Overloading)
+Occurs when multiple methods have the same name but different parameters.
+Runtime Polymorphism (Method Overriding)
+Occurs when a subclass provides a specific implementation of a method that is already defined in the parent class.
+
+Why Polymorphism?
+It enhances flexibility and reusability.
+It allows code to work with objects of different types through a common interface.
+
+Example of Method Overloading (Compile-time):
+
+class MathOperations {
+    // Method overloading
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MathOperations math = new MathOperations();
+        System.out.println(math.add(5, 10));        // Calls int version
+        System.out.println(math.add(5.5, 10.5));    // Calls double version
+    }
+}
+
+Output:
+15
+16.0
+
+Example of Method Overriding (Runtime):
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.sound(); // Output: Animal makes a sound
+        
+        Animal dog = new Dog();  // Upcasting
+        dog.sound();  // Output: Dog barks
+    }
+}
+
+Output:
+
+Animal makes a sound
+Dog barks
+
+
+4. Abstraction (Hiding Implementation Details)
+Definition:
+Abstraction is the concept of hiding the implementation details and only showing the essential features of an object.
+It is achieved using abstract classes and interfaces.
+
+Why Abstraction?
+It reduces complexity by hiding unnecessary details and showing only the relevant parts.
+It helps focus on the what an object does, rather than the how.
+
+How does it work?
+Abstract classes cannot be instantiated and may contain both abstract (without implementation) and concrete (with implementation) methods.
+Interfaces define a contract that classes must follow.
+
+Example: Abstract Class:
+
+abstract class Animal {
+    abstract void sound();  // Abstract method
+
+    void sleep() {
+        System.out.println("Animal is sleeping");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog();
+        animal.sound();  // Dog barks
+        animal.sleep();  // Animal is sleeping
+    }
+}
+
+Output:
+Dog barks
+Animal is sleeping
+
+Summary of OOP Principles in Java
+Principle	    Description	Example
+Encapsulation	Hiding the internal state of an object and controlling access via methods.	Private fields and public getter/setter methods.
+Inheritance	    Creating a new class that is based on an existing class.	Dog inherits from Animal.
+Polymorphism	The ability to use a common interface for different types.	Method overloading and overriding.
+Abstraction	    Hiding implementation details and showing only essential features.	Abstract classes and interfaces.
+
+💡 Conclusion
+Object-Oriented Programming in Java revolves around four major principles: Encapsulation, Inheritance, Polymorphism, and Abstraction. Mastering these principles is essential for writing clean, maintainable, and efficient code.
+
+Each principle solves specific problems related to code organization, reusability, and clarity, making OOP one of the most powerful paradigms for software development.
+
+
+
+
+
+
+
