@@ -16,12 +16,17 @@ public class Driver {
                 // swift.start();
                 // swift.drive();
 
-                // for this keyword
+                // for this keyword for return object
 
-                Car swift = new Car(); // Step 1: Creating Car object named 'swift'
-                swift.addFuel(6); // Step 2: Adding 6 liters of fuel
-                Car startedCar = swift.start(); // Step 3: Starting the car, returns 'this' (which is the same 'swift'  object)
-                startedCar.drive(); // Step 4: Calling drive() on the returned object
+                // Car swift = new Car(); // Step 1: Creating Car object named 'swift'
+                // swift.addFuel(6); // Step 2: Adding 6 liters of fuel
+                // Car startedCar = swift.start(); // Step 3: Starting the car, returns 'this' (which is the same 'swift'  object)
+                // startedCar.drive(); // Step 4: Calling drive() on the returned object
+                
+                // for thiskeyword for method chaining
+                Car swift = new Car(); 
+                swift.addFuel(6);
+                swift.start().drive();
 
         }
 }
